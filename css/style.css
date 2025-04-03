@@ -1841,14 +1841,14 @@ html, body {
 
 
 
-/* === ROW 2 CONTAINER === */
+/* === ROW 2  === */
 .square-row2 {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(1.2rem, 2vw, 2rem);
   padding: 0 81px;
   box-sizing: border-box;
-  margin-top: 4rem;
+  margin-top: clamp(2rem, 5vw, 4rem); /* responsive margin-top */
 }
 
 /* === LEFT: Big Square === */
@@ -1956,6 +1956,73 @@ html, body {
   visibility: hidden;
 }
 
+
+
+
+
+/* === ROW 3 === */
+
+.square-row3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.2rem, 2vw, 2rem);
+  padding: 0 81px;
+  box-sizing: border-box;
+  margin-top: clamp(2rem, 5vw, 4rem); /* responsive margin-top */
+
+}
+
+.square3-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.square3-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keeps square shape */
+  background-color: #EAEAEE;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square3-img-wrapper img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+.square3-img-wrapper.transparent {
+  border: 1px solid #39415C;
+  background-color: white;
+}
+
+.square3-label {
+  margin-top: clamp(0.75rem, 2vw, 1.5rem); /* responsive top margin */
+  font-size: clamp(0.5rem, 1.5vw, 0.7rem); 
+  line-height: 1.3;
+  color: #39415C;
+  font-family: 'Gotham', sans-serif;
+  text-align: left;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* === Medium screen: 2-column layout === */
 @media (max-width: 1024px) {
   .square-row2 {
@@ -2017,6 +2084,11 @@ html, body {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 1.5rem;
   }
+
+  .square-row3 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+  }
   .square-row2 {
     display: flex;
     flex-direction: column;
@@ -2039,10 +2111,7 @@ html, body {
     width: 100%;
   }
 
-  .square-grid-right .square2-item:nth-child(3) {
-    display: none; /* still hidden */
-  }
-
+  
   .cs-divider {
     display: none;  /* === Divider === */
   }
@@ -2050,6 +2119,11 @@ html, body {
   .cshowcase-title-group {
     padding: 0 1.5rem;
   }
+  
+  .transparent-square {
+    display: none;
+  }
+
   
 }
 
