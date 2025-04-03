@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>collectionshowcase – Qinghua Porcelain</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- TOP HEADER -->
+  <header class="top-header">
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <div class="sub-links">
+        <a href="cshowcase.html">Collection</a>
+        <a href="#">About</a>
+      </div>
+    </nav>
+    <h1>- QINGHUA PORCELAIN -</h1>
+    <a href="index.html" class="logo">
+      <img src="images/headbarlogo.png" alt="Qinghua Porcelain Logo">
+    </a>
+  </header>
+
+  <!-- MOBILE HEADER — now outside the desktop one -->
+	<header class="mobile-top-header">
+	  <div class="mobile-header">
+		<!-- Menu Icon -->
+		<div class="menu-icon" onclick="openNav()">
+			<img src="images/menuicon.png" alt="Menu Icon" />
+		  </div>
+		  
+		  
+  
+		<!-- Centered Logo -->
+		<a href="index.html" class="logo-center">
+			<img src="images/headbarlogo.png" alt="Qinghua Porcelain Logo" />
+		  </a>
+	  </div>
+
+	  <hr class="m-header-divider" />
+
+	</header>
+
+	<!-- Overlay Navigation (✅ now inside <body>) -->
+		<div id="mobileNavOverlay" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+			  <a href="index.html">Home</a>
+			  <a href="cshowcase.html">Collection</a>
+			  <a href="#about">About</a>
+			</div>
+		  </div>
+		
+		  <!-- Overlay toggle scripts -->
+		  <script>
+			function openNav() {
+			  document.getElementById("mobileNavOverlay").style.width = "100%";
+			}
+		
+			function closeNav() {
+			  document.getElementById("mobileNavOverlay").style.width = "0%";
+			}
+
+			
+		  </script>
+
+		  
+
+  
+  </body>
+ 
+  
+
+
+
+ <section class="cshowcase-title-group">
+    <h2 class="cshowcase-title">Collection</h2>
+    <hr class="cs-divider" />
+ </section>
+
+
+
+
+ <section class="square-row1">
+    <figure class="square-item">
+      <div class="square-img-wrapper">
+        <img src="images/cshowcase/r11.png" alt="Item 1" />
+      </div>
+      <figcaption class="square-label">Kangxi Period, Qing Dynasty
+        Blue and White Mallet Vase with Dragon and Wave Design, </figcaption>
+    </figure>
+  
+    <figure class="square-item">
+      <div class="square-img-wrapper">
+        <img src="images/cshowcase/r12.png" alt="Item 2" />
+      </div>
+      <figcaption class="square-label">Blue and White Flattened Porcelain Vase with Sea Wave and Cloud Dragon Motif</figcaption>
+    </figure>
+  
+    <figure class="square-item">
+      <div class="square-img-wrapper transparent"></div>
+        <!-- no image -->
+      
+    </figure>
+  
+    <figure class="square-item">
+      <div class="square-img-wrapper">
+        <img src="images/cshowcase/r13.png" alt="Item 4" />
+      </div>
+      <figcaption class="square-label">Blue and White Stemmed Tribute Plate with Scrolling Floral and Sea Wave Motif</figcaption>
+    </figure>
+  </section>
+  
+
+
+
+
+
+<section class="square-row2">
+    <!-- LEFT: Big square -->
+    <div class="square2-left-wrapper">
+      <figure class="square2-left">
+        <div class="square2-left-img-wrapper">
+          <img src="images/cshowcase/r21.png" alt="Big square" />
+        </div>
+        <figcaption class="square2-label">
+            Yuan Dynasty
+            Blue and White Jar with Fish and Wave Design
+        </figcaption>
+      </figure>
+    </div>
+
+   <!-- Right Grid-->
+<div class="square-grid-right">
+  <figure class="square2-item">
+    <div class="square2-img-wrapper">
+      <img src="images/cshowcase/r22.png" alt="Small 1" />
+    </div>
+    <figcaption class="square2-label">Blue and White Vase with Sea Wave - Banana Leaf Motif</figcaption>
+  </figure>
+
+  <figure class="square2-item">
+    <div class="square2-img-wrapper transparent"></div>
+    <figcaption class="square2-label"></figcaption>
+  </figure>
+
+  <!-- Invisible placeholder that keeps layout spacing -->
+  <figure class="square2-item invisible"></figure>
+
+  <figure class="square2-item">
+    <div class="square2-img-wrapper">
+      <img src="images/cshowcase/r23.png" alt="Small 4" />
+    </div>
+    <figcaption class="square2-label">Chenghua Period, Ming Dynasty
+        Small Blue and White Jar with Yinglong and Wave Design, </figcaption>
+  </figure>
+</div>
+
+</section>

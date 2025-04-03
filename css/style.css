@@ -1,0 +1,2055 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin:0;
+  padding: 0;
+
+}
+
+
+body {
+    background-color: white;
+    font-family: "Gotham", sans-serif;
+  }
+
+
+/* Hide mobile header by default (desktop) */
+.mobile-top-header {
+  display: none;
+}
+
+.top-header {
+  padding: 40px 81px; /* Default desktop */
+}
+
+
+/* Container for header */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2.688rem 5.063rem;
+  margin: 0 auto;
+}
+
+/* Left Nav */
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  flex: 1;
+}
+
+/* Sub-links */
+.sub-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+/* Base link styles */
+.main-nav > a,
+.sub-links a {
+  position: relative;
+  text-decoration: none;
+  color: #39415C;
+  font-size: 1.06rem;
+  font-weight: 500;
+}
+
+/* Underline animation */
+.main-nav > a::after,
+.sub-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* space below text */
+  width: 0;
+  height: 2px;
+  background-color: #39415C;
+  transition: width 0.5s ease;
+}
+
+/* Hover effect */
+.main-nav > a:hover::after,
+.sub-links a:hover::after {
+  width: 100%;
+}
+
+
+/* Center Heading */
+.top-header h1 {
+  flex: 2; /* Takes more space */
+  text-align: center;
+  margin: 0;
+  font-size: 1.125rem;
+  font-family: "Gotham", sans-serif;
+  color: #39415C;
+}
+
+/* Right Logo */
+.logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .top-header{
+    display: none;
+  }
+
+  .mobile-top-header{
+    display: block;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 1.5rem; /* Top and horizontal padding */
+  }
+  
+  /* Resize icons */
+  .menu-icon img{
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+  }
+  .logo-center {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* or flex-end/left depending on layout */
+    text-decoration: none;   /* remove underline if it ever shows */
+  }
+  
+  .logo-center img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    display: block; /* avoid extra space below the image */
+  }
+  
+  .m-header-divider {
+  width: auto;
+  height: 1.5px;
+  background-color: #39415C; /* or a soft gray like #ccc */
+  opacity: 0.5;              /* optional transparency */
+  border: none;
+  margin: 0 1.5rem;
+}
+
+
+
+}
+
+
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: rgba(29, 42, 65, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 2.3rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover {
+  color: #ccc;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+  
+
+
+/* for desktop 
+@media (min-width: 769px) {
+  /*  desktop-only content 
+  .main-nav,
+  .logo,
+  .top-header h1 {
+    display: none !important;
+  }
+  */ 
+
+
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+/*  mobile */
+
+
+
+
+
+.content {
+  width: 100%;
+  padding: 0 81px;
+  box-sizing: border-box;
+}
+
+
+.stack-grid {
+  display: grid;
+  grid-template-areas: "stack";
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  justify-items: start; /* this aligns all content to the left */
+  position: relative;
+}
+
+
+.stack-grid > * {
+  grid-area: stack;
+}
+
+.img-title-mobile {
+  display: none; /* Only visible on mobile */
+  width: 100%;
+}
+
+.img-back {
+  width: 49%;
+  transform: translate(97%, -1%);
+  opacity: 1;
+}
+
+.img-front {
+  width: 100%;
+  transform: translateY(-85%);
+  opacity: 0.95;
+}
+
+
+
+.homepage-text { 
+  margin-top: 17%;
+  max-width: 33vw;
+  color: #39415C;
+  font-family: "Gotham", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  /* remove margin-left or padding */
+}
+
+@media (max-width: 1080px) {
+  .homepage-text { 
+    font-size: 0.8rem;
+    
+  }
+}
+
+@media (max-width: 919px) {
+  .homepage-text { 
+    font-size: 0.7rem;
+    
+  }
+}
+
+@media (max-width: 820px) {
+  .homepage-text { 
+    font-size: 0.6rem;
+    
+  }
+}
+
+
+
+
+
+.header-button {
+  display: flex;
+  align-items: center;      /* this aligns button and image vertically */
+  gap: 1.5rem;              /* space between button and arrow */
+  margin-left: 38%;         /* or center with margin: 0 auto; */
+  transform: translateY(-130%); /* move the entire group up */
+}
+
+.header-button button {
+  width: 9.4rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+  background-color: #39415C;
+  color: white;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+
+}
+
+.header-button button:hover {
+  width: 9.4rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  background-color: #ffffff;
+  color: #39415C;
+  border: 2px solid #39415C;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  transition-duration: 0.15s;
+
+}
+
+.img-harrow {
+  height: 1rem;      /* match button scale */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .stack-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .img-front {
+    display: none;
+  }
+
+  .img-title-mobile {
+    margin-top: 6%;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .img-back {
+    margin-top: 6%;
+    width: 100%;
+    transform: none;
+  }
+
+  .homepage-text {
+    text-align: center;
+    max-width: 100%;
+    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+    margin-top: 1%;
+  }
+
+  .header-button {
+    position: static;
+    transform: none;
+    margin: 1rem auto 0;
+    justify-content: center;
+    margin: 5% 5%;
+
+  }
+
+  .img-harrow {
+    display: none;
+  }
+  
+}
+
+
+
+
+/* Section container */
+.info-section {
+  width: 100%;
+  padding: 9px 81px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Shared line styles */
+.divider {
+  background-color: #39415C;
+  border: none;
+  width: 100%;
+  display: block;
+}
+
+/* Top line at the very top */
+.top-line {
+  height: 0.125vw;
+  margin: 0;           /* No extra spacing */
+  opacity: 1;
+}
+
+
+/* Bottom line directly under image */
+.bottom-line {
+  height: 1px;
+  margin: 0;
+  opacity: 0.5;
+}
+
+/* Image wrapper */
+.info-content {
+  margin-top: 10vw;   /* Push the image 150px below the top line */
+}
+
+/* Image */
+.info-collection {
+  display: block;
+  width: 45vw;
+  height: auto;
+  margin-bottom: 1.2vw;
+}
+
+/* Section container */
+
+
+
+/* collection section */
+.collection-link {
+  text-decoration: none;
+  display: block;
+}
+
+
+.collection-section {
+  padding: 2.2rem 5.063rem; /* top/bottom and left/right padding */
+  box-sizing: border-box;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* ← allow full flexibility */
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .collection-section {
+    padding: 1.4rem 81px; /* top/bottom and left/right padding */
+    box-sizing: border-box;
+  }
+}
+
+
+
+
+/* Fixed-size collection card */
+.collection-item {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #EAEAEE;
+  border: 1px solid #EAEAEE;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Image styling */
+.item-image {
+  width: 100%;
+  max-width: 78%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-top: 18%;
+  border-radius: 4px;
+}
+
+.item-image.cdragon-image{
+  width: 100%;
+  max-width: 78%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-top: 31%;
+  border-radius: 4px;
+}
+
+.item-divider1 {
+  width: 85%;
+  height: 1px;
+  background-color: #39415C;
+  border: none;
+  margin: 15px auto;
+  opacity: 1;
+}
+
+.item-divider2 {
+  width: 85%;
+  height: 1px;
+  background-color: #39415C;
+  border: none;
+  margin: 15px auto;
+  opacity: 1;
+}
+
+.item-divider3 {
+  width: 85%;
+  height: 1px;
+  background-color: #39415C;
+  border: none;
+  margin: 15px auto;
+  opacity: 1;
+}
+
+
+.text-block {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Description */
+.item-description {
+  font-size: clamp(0.75rem, 2.5vw, 0.8rem);
+  color: #39415C;
+  line-height: 1.2rem;
+  margin: 0;
+}
+
+/* Title */
+.item-title {
+  font-size: clamp(0.8rem, 2.5vw, 0.85rem);
+  font-weight: 600;
+  line-height: 1.2rem;
+  margin: 0 0 10px;
+  margin-top: 5%;
+  color: #39415C;
+}
+
+
+
+/* collection1 */
+.collection-feature1 {
+  padding: 4rem 5rem 3rem;
+}
+
+.collection-title1 {
+  font-size: 3rem;
+  color: #39415C;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* grey rectangle */
+.collection-image-box1 {
+  background-color: #EAEAEE;
+  width: 100%;
+  height: clamp(20rem, 50vw, 48rem);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Your image inside */
+.collection-image1 {
+  width: 50%;
+  object-fit: contain;
+}
+
+
+
+
+
+/* Horizontal line containers */
+.motif-section {
+  margin: 0rem 0;
+}
+
+.motif-lines {
+  padding: 0 81px;
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+}
+
+
+
+/* Content grid */
+.motif-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 81px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Use ::before and ::after for the 2 vertical lines */
+.with-vertical-lines::before,
+.with-vertical-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+/* First vertical line: between column 1 and 2 */
+.with-vertical-lines::before {
+  left: calc((100% - 162px) / 3 + 81px); /* (Full width - padding) / 3 + left padding */
+}
+
+/* Second vertical line: between column 2 and 3 */
+.with-vertical-lines::after {
+  left: calc(((100% - 162px) / 3) * 2 + 81px);
+}
+
+
+/* Text styling */
+.motif-column {
+  padding: 0 0rem 0rem;
+  box-sizing: border-box;
+  color: #39415C;
+}
+
+.motif-column h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.motif-column p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  max-width: 19rem;
+}
+
+.shift-right2 {
+  padding-left: 2.5rem; /* or adjust to whatever looks good */
+}
+
+.shift-right3 {
+  padding-left: 1.5rem; /* or adjust to whatever looks good */
+}
+
+
+
+/* Section wrapper */
+.example-section {
+  padding: 0rem 5rem;
+}
+
+/* Row layout: label group on left, cards on right */
+.example-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* vertical line label group */
+.vertical-line-label-group {
+  position: relative;
+  margin-left: 0rem ;
+  height: 50rem; /* total height of wrapper */
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.vertical-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg) translateY(-5rem);
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #39415C;
+}
+
+.vertical-extension-line {
+  position: absolute;
+  top: 0;
+  left: 8rem; /* positioned right next to label */
+  height: 100%; /* full height of wrapper */
+  width: 1px;
+  background-color: #39415C;
+  opacity: 0.4;
+}
+
+
+/* Right side: cards aligned horizontally */
+.example-cards {
+  margin-top: 8.1rem;
+  display: flex;
+  flex-direction: row; /*  horizontal layout */
+  gap: 2rem; /* Adjust spacing between cards here */
+}
+
+/* Wrap for each text+card block */
+.example-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Text above the card */
+.example-desc {
+  font-size: 0.85rem;
+  color: #39415C;
+  line-height: 1.4;
+  font-weight: 600;
+  text-align: left;
+  width: 20rem; /* match card width */
+  margin-bottom: 1rem;
+}
+
+
+
+/* The grey rectangle card */
+.example-card {
+  width: 19rem;
+  height: 28rem;
+  background-color: #EAEAEE;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+/* for ALL images */
+.example-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.sea-image1 {
+  display: block;
+  max-width: 82%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.sea-image2 {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.sea-image3 {
+  display: block;
+  max-width: 92%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+
+
+
+/* mbottom section */
+/* Horizontal line containers */
+.mbottom-section {
+  margin: 0rem 0 8rem;
+}
+
+.mbottom-lines {
+  padding: 0 81px;
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+}
+
+
+/* Content grid */
+.mbottom-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 81px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Use ::before and ::after for the 2 vertical lines */
+.with-vertical-lines::before,
+.with-vertical-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+/* First vertical line: between column 1 and 2 */
+.with-vertical-lines::before {
+  left: calc((100% - 162px) / 3 + 81px);
+}
+
+/* Second vertical line: between column 2 and 3 */
+.with-vertical-lines::after {
+  left: calc(((100% - 162px) / 3) * 2 + 81px);
+}
+
+
+/* Text styling */
+.mbottom-column {
+  padding: 0 0rem 0rem;
+  box-sizing: border-box;
+  color: #39415C;
+}
+
+.mbottom-column h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.mbottom-column p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  max-width: 19rem;
+}
+
+.shift-right2 {
+  padding-left: 2.5rem;
+}
+
+.shift-right3 {
+  padding-left: 1.5rem;
+}
+/* collection1 */
+
+
+
+
+
+
+
+
+
+
+/* collection2 */
+.collection-feature2 {
+  padding: 4rem 5rem 3rem;
+}
+
+.collection-title2 {
+  font-size: 3rem;
+  color: #39415C;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* grey rectangle */
+.collection-image-box2 {
+  background-color: #EAEAEE;
+  width: 100%;
+  height: clamp(20rem, 50vw, 48rem);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Your image inside */
+.collection-image2 {
+  width: 51%;
+  object-fit: contain;
+}
+
+
+
+/* Horizontal line containers */
+.lotus-section {
+  margin: 0rem 0;
+}
+
+.lotus-lines {
+  padding: 0 81px;
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+}
+
+
+
+/* Content grid */
+.lotus-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 81px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Use ::before and ::after for the 2 vertical lines */
+.with-vertical-lines::before,
+.with-vertical-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+/* First vertical line: between column 1 and 2 */
+.with-vertical-lines::before {
+  left: calc((100% - 162px) / 3 + 81px); /* (Full width - padding) / 3 + left padding */
+}
+
+/* Second vertical line: between column 2 and 3 */
+.with-vertical-lines::after {
+  left: calc(((100% - 162px) / 3) * 2 + 81px);
+}
+
+
+/* Text styling */
+.lotus-column {
+  padding: 0 0rem 0rem;
+  box-sizing: border-box;
+  color: #39415C;
+}
+
+.lotus-column h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.lotus-column p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  max-width: 19rem;
+}
+
+.shift-right2 {
+  padding-left: 2.5rem; /* or adjust to whatever looks good */
+}
+
+.shift-right3 {
+  padding-left: 1.5rem; /* or adjust to whatever looks good */
+}
+
+
+
+
+
+/* LOTUS Section wrapper */
+.example-section-c2 {
+  padding: 0rem 5rem;
+}
+
+/* Row layout: label group on left, cards on right */
+.example-layout-c2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* vertical line label group */
+.vertical-line-label-group-c2 {
+  position: relative;
+  margin-left: 0rem ;
+  height: 50rem; /* total height of wrapper */
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.vertical-label-c2 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg) translateY(-5rem);
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #39415C;
+}
+
+.vertical-extension-line-c2 {
+  position: absolute;
+  top: 0;
+  left: 8rem; /* positioned right next to label */
+  height: 100%; /* full height of wrapper */
+  width: 1px;
+  background-color: #39415C;
+  opacity: 0.4;
+}
+
+
+/* Right side: cards aligned horizontally */
+.example-cards-c2 {
+  margin-top: 8.1rem;
+  display: flex;
+  flex-direction: row; /*  horizontal layout */
+  gap: 2rem; /* Adjust spacing between cards here */
+}
+
+/* Wrap for each text+card block */
+.example-card-wrapper-c2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Text above the card */
+.example-desc-c2 {
+  font-size: 0.85rem;
+  color: #39415C;
+  line-height: 1.4;
+  font-weight: 600;
+  text-align: left;
+  width: 20rem; /* match card width */
+  margin-bottom: 1rem;
+}
+
+
+
+/* The grey rectangle card */
+.example-card-c2 {
+  width: 19rem;
+  height: 28rem;
+  background-color: #EAEAEE;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+/* for ALL images */
+.example-card-2 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.lotus-image1 {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.lotus-image2 {
+  display: block;
+  max-width: 88%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.lotus-image3 {
+  display: block;
+  max-width: 85%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+
+
+/* mbottom section */
+/* Horizontal line containers */
+.mbottom-section {
+  margin: 0rem 0 8rem;
+}
+
+.mbottom-lines {
+  padding: 0 81px;
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+}
+
+
+/* Content grid */
+.mbottom-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 81px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Use ::before and ::after for the 2 vertical lines */
+.with-vertical-lines::before,
+.with-vertical-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+/* First vertical line: between column 1 and 2 */
+.with-vertical-lines::before {
+  left: calc((100% - 162px) / 3 + 81px);
+}
+
+/* Second vertical line: between column 2 and 3 */
+.with-vertical-lines::after {
+  left: calc(((100% - 162px) / 3) * 2 + 81px);
+}
+
+
+/* Text styling */
+.mbottom-column {
+  padding: 0 0rem 0rem;
+  box-sizing: border-box;
+  color: #39415C;
+}
+
+.mbottom-column h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.mbottom-column p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  max-width: 19rem;
+}
+
+.shift-right2 {
+  padding-left: 2.5rem;
+}
+
+.shift-right3 {
+  padding-left: 1.5rem;
+}
+/* collection2 */
+
+
+
+
+
+/* collection3 */
+
+.collection-feature3 {
+  padding: 4rem 5rem 2rem;
+}
+
+.collection-title3 {
+  font-size: 3rem;
+  color: #39415C;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* grey rectangle */
+.collection-image-box3 {
+  background-color: #EAEAEE;
+  width: 100%;
+  height: clamp(20rem, 50vw, 48rem);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Your image inside */
+.collection-image3 {
+  width: 60%;
+  object-fit: contain;
+}
+
+
+
+/* Horizontal line containers */
+.dragon-section {
+  margin: 0rem 0;
+}
+
+.dragon-lines {
+  padding: 0 81px;
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+}
+
+
+/* Content grid */
+.dragon-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 81px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Use ::before and ::after for the 2 vertical lines */
+.with-vertical-lines::before,
+.with-vertical-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+/* First vertical line: between column 1 and 2 */
+.with-vertical-lines::before {
+  left: calc((100% - 162px) / 3 + 81px); /* (Full width - padding) / 3 + left padding */
+}
+
+/* Second vertical line: between column 2 and 3 */
+.with-vertical-lines::after {
+  left: calc(((100% - 162px) / 3) * 2 + 81px);
+}
+
+
+/* Text styling */
+.dragon-column {
+  padding: 0 0rem 0rem;
+  box-sizing: border-box;
+  color: #39415C;
+}
+
+.dragon-column h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.dragon-column p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  max-width: 19rem;
+}
+
+.shift-right2 {
+  padding-left: 2.5rem; /* or adjust to whatever looks good */
+}
+
+.shift-right3 {
+  padding-left: 1.5rem; /* or adjust to whatever looks good */
+}
+
+
+
+/* DRAGON Section wrapper */
+.example-section-c3 {
+  padding: 0rem 5rem;
+}
+
+/* Row layout: label group on left, cards on right */
+.example-layout-c3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* vertical line label group */
+.vertical-line-label-group-c3 {
+  position: relative;
+  margin-left: 0rem ;
+  height: 50rem; /* total height of wrapper */
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.vertical-label-c3 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg) translateY(-5rem);
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #39415C;
+}
+
+.vertical-extension-line-c3 {
+  position: absolute;
+  top: 0;
+  left: 8rem; /* positioned right next to label */
+  height: 100%; /* full height of wrapper */
+  width: 1px;
+  background-color: #39415C;
+  opacity: 0.4;
+}
+
+
+/* Right side: cards aligned horizontally */
+.example-cards-c3 {
+  margin-top: 8.1rem;
+  display: flex;
+  flex-direction: row; /*  horizontal layout */
+  gap: 2rem; /* Adjust spacing between cards here */
+}
+
+/* Wrap for each text+card block */
+.example-card-wrapper-c3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Text above the card */
+.example-desc-c3 {
+  font-size: 0.85rem;
+  color: #39415C;
+  line-height: 1.4;
+  font-weight: 600;
+  text-align: left;
+  width: 20rem; /* match card width */
+  margin-bottom: 1rem;
+}
+
+
+
+/* The grey rectangle card */
+.example-card-c3 {
+  width: 19rem;
+  height: 28rem;
+  background-color: #EAEAEE;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+/* for ALL images */
+.example-card-3 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.dragon-image1 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.dragon-image2 {
+  display: block;
+  max-width: 86%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.dragon-image3 {
+  display: block;
+  max-width: 78%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+
+/* mbottom section */
+/* Horizontal line containers */
+.mbottom-section {
+  margin: 0rem 0 8rem;
+}
+
+.mbottom-lines {
+  padding: 0 81px;
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+}
+
+
+/* Content grid */
+.mbottom-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 81px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Use ::before and ::after for the 2 vertical lines */
+.with-vertical-lines::before,
+.with-vertical-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+/* First vertical line: between column 1 and 2 */
+.with-vertical-lines::before {
+  left: calc((100% - 162px) / 3 + 81px);
+}
+
+/* Second vertical line: between column 2 and 3 */
+.with-vertical-lines::after {
+  left: calc(((100% - 162px) / 3) * 2 + 81px);
+}
+
+
+/* Text styling */
+.mbottom-column {
+  padding: 0 0rem 0rem;
+  box-sizing: border-box;
+  color: #39415C;
+}
+
+.mbottom-column h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.mbottom-column p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  max-width: 19rem;
+}
+
+.shift-right2 {
+  padding-left: 2.5rem;
+}
+
+.shift-right3 {
+  padding-left: 1.5rem;
+}
+
+
+
+/* collection3 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.learn-more {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Text + arrow side-by-side */
+.learn-more-arrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  width: fit-content;
+  margin: 9.5% 0 0.625rem;
+  
+}
+
+@media (max-width: 768px) {
+  .learn-more-arrow {
+    margin: 3rem 0 1rem;
+  }
+}
+
+
+/* Text styling */
+.button-text {
+  font-size: 90%;
+  font-weight: 600;
+  color: #39415C;
+  margin: 0; /* Important: remove margin to bring closer to line */
+}
+
+/* Arrow icon */
+.arrow-up-right {
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+  margin: 0; /* Just in case */
+}
+
+/* The horizontal line */
+.collection-bottom-line {
+  width: 100%;
+  height: 2px;
+  background-color: #39415C;
+  border: none;
+  opacity: 1;
+  margin: 0; /* Remove margin to stick it right under the text/arrow */
+}
+
+
+
+
+
+.split-section {
+  padding: 6.5rem 5.0625rem;
+  box-sizing: border-box;
+}
+
+
+.split-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+
+/* Left side with stacked images */
+.split-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-image {
+  width: 26vw;
+
+}
+
+.img-bottom-wrapper {
+  margin-top: 10vw;
+}
+
+.about-pimage {
+  width: 35%;
+  height: auto;
+}
+
+
+/* Right side with text and button */
+.split-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align button and text left */
+  padding-left: 2rem; /* optional: match the page's layout or grid */
+  gap: 1.6rem; /* adds spacing between text and button */
+}
+
+/* Text styles */
+.text-content {
+  margin-bottom: 3rem;
+  max-width: 31rem;
+}
+
+.text-title {
+  font-size: clamp(0.75rem, 2.5vw, 0.813rem);
+  font-weight: bold;
+  margin: 0 0 2rem;
+  color: #39415C;
+}
+
+.text-description {
+  font-size: clamp(0.2rem, 2.5vw, 0.813rem);
+  color: #39415C;
+  line-height: 1.6;
+}
+
+
+.split-right button {
+  width: 9.2rem;
+  height: 3rem;
+  letter-spacing: 0.08rem;
+  background-color: #39415C;
+  color: white;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+.split-right button:hover {
+  width: 9.4rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  background-color: #ffffff;
+  color: #39415C;
+  border: 2px solid #39415C;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  transition-duration: 0.15s;
+
+}
+
+
+
+.img-bottom {
+  width: 1.125rem;
+  height: 1.125rem;
+  object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+  .split-section {
+    padding: 4rem 1.5rem;
+  }
+  
+
+  .split-container {
+    flex-direction: column;
+  }
+
+  .about-pimage {
+    display: none;
+  }
+
+  .split-right {
+    padding-left: 0;
+    width: 70%;
+  }
+}
+
+/* Button */
+
+
+
+
+/* CSHOWCASE */ 
+.cshowcase-title-group { 
+  padding: 4rem 5rem 3rem;
+
+}
+
+
+.cshowcase-title { 
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #39415C;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .cshowcase-title { 
+   margin-top: 8%;
+    
+  }
+}
+.cs-divider {
+  width: 100%;           /* or 100%, or any size you want */
+  height: 1.5px;
+  background-color: #39415C; /* match your theme */
+  border: none;
+  margin-top: 0.3rem;
+}
+
+
+
+/* == ROW 1 == */
+.square-row1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.2rem, 2vw, 2rem);
+  padding: 0 81px;
+  box-sizing: border-box;
+}
+
+
+.square-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.square-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keeps square shape */
+  background-color: #EAEAEE;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square-img-wrapper img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+.square-img-wrapper.transparent {
+  border: 1px solid #39415C;
+  background-color: white;
+}
+
+.square-label {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  color: #39415C;
+  font-family: 'Gotham', sans-serif;
+  text-align: left;
+  width: 100%;
+}
+
+
+
+
+
+/* === ROW 2 CONTAINER === */
+.square-row2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.2rem, 2vw, 2rem);
+  padding: 0 81px;
+  box-sizing: border-box;
+  margin-top: 4rem;
+}
+
+/* === LEFT: Big Square === */
+
+.big-square {
+  flex: 0 0 624px; /* Fixed width on larger screens */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .big-square {
+    flex: 1 1 100%;
+  }
+}
+
+.square2-left-wrapper {
+  width: calc((100% - 1.5rem) / 2); /* 50% of row1 width minus half the total gap */
+  flex-shrink: 0;
+}
+
+.square2-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.square2-left-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EAEAEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.square2-left-img-wrapper img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* === RIGHT: 2×2 Small Squares === */
+.square-grid-right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  box-sizing: border-box;
+  flex: 1 1 0;
+}
+
+
+/* Stretch all items and keep layout consistent */
+.square2-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Move the 4th square up slightly */
+.square-grid-right .square2-item:nth-child(4) {
+  margin-top: -2rem;
+}
+
+.square2-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EAEAEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.square2-img-wrapper img {
+  width: 63%;
+  height: 63%;
+  object-fit: cover;
+  display: block;
+}
+
+.square2-img-wrapper.transparent {
+  background-color: white;
+  border: 1px solid #39415C;
+}
+
+.square2-label {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  color: #39415C;
+  font-family: 'Gotham', sans-serif;
+  text-align: left;
+  width: 100%;
+}
+
+/* Placeholder: invisible but keeps layout space */
+.square2-item.invisible {
+  visibility: hidden;
+}
+
+/* === Medium screen: 2-column layout === */
+@media (max-width: 1024px) {
+  .square-row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "big item1"
+      "item2 item4";
+    gap: 1.5rem;
+  }
+
+  .square2-left-wrapper {
+    grid-area: big;
+    width: 100%;
+  }
+
+  .square-grid-right {
+    display: contents; /* allows grid children to place directly into .square-row2 */
+  }
+
+  .square-grid-right .square2-item:nth-child(1) {
+    grid-area: item1;
+  }
+
+  .square-grid-right .square2-item:nth-child(2) {
+    grid-area: item2;
+  }
+
+  .square-grid-right .square2-item:nth-child(3) {
+    display: none; /* invisible placeholder hidden */
+  }
+
+  .square-grid-right .square2-item:nth-child(4) {
+    grid-area: item4;
+    margin-top: 0;
+  }
+}
+
+/* === Small screen: stacked layout === */
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+  .collection-section {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .info-section {
+    padding: 9px 1.5rem; /* Match mobile padding elsewhere */
+  }
+
+  .bottom-line {
+    height: 0.5px;     /* thinner line */
+    opacity: 0.5;      /* more subtle */
+    margin-top: 8px;   /* optional spacing */
+  }
+
+  .square-row1 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+  }
+  .square-row2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+
+  }
+
+  .square2-left-wrapper {
+    width: 100%;
+  }
+
+  .square-grid-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .square2-item {
+    width: 100%;
+  }
+
+  .square-grid-right .square2-item:nth-child(3) {
+    display: none; /* still hidden */
+  }
+
+  .cs-divider {
+    display: none;  /* === Divider === */
+  }
+
+  .cshowcase-title-group {
+    padding: 0 1.5rem;
+  }
+  
+}
+
+
