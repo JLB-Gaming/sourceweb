@@ -349,13 +349,18 @@ html, body {
   letter-spacing: 0.08rem;
   background-color: #EAEAEE;
   color: #39415C;
-  
   border: 2px solid #39415C; 
   font-family: 'Raleway', sans-serif;
   cursor: pointer;
   transition-duration: 0.15s;
 
 }
+
+.header-button a,
+.header-button-link {
+  text-decoration: none;
+}
+
 
 .img-harrow {
   height: 1rem;      /* match button scale */
@@ -572,7 +577,7 @@ html, body {
 
 /* Description */
 .item-description {
-  font-size: clamp(0.75rem, 2.5vw, 0.8rem);
+  font-size: clamp(12px, 2.5vw, 13px);
   color: #39415C;
   line-height: 1.2rem;
   margin: 0;
@@ -580,7 +585,7 @@ html, body {
 
 /* Title */
 .item-title {
-  font-size: clamp(0.8rem, 2.5vw, 0.85rem);
+  font-size: clamp(13px, 2.5vw, 13.5px);
   font-weight: 600;
   line-height: 1.2rem;
   margin: 0 0 10px;
@@ -1580,6 +1585,7 @@ html, body {
 
 /* Text + arrow side-by-side */
 .learn-more-arrow {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -1676,18 +1682,18 @@ html, body {
 /* Text styles */
 .text-content {
   margin-bottom: 3rem;
-  max-width: 31rem;
+  width: 100%;
 }
 
 .text-title {
-  font-size: clamp(0.75rem, 2.5vw, 0.813rem);
+  font-size: clamp(12px, 1.5vw, 16px);   /* responsive font-size */
   font-weight: bold;
   margin: 0 0 2rem;
   color: #39415C;
 }
 
 .text-description {
-  font-size: clamp(0.2rem, 2.5vw, 0.813rem);
+  font-size: clamp(12px, 1.5vw, 16px);   /* responsive font-size */
   color: #39415C;
   line-height: 1.6;
 }
@@ -1747,7 +1753,7 @@ html, body {
 
   .split-right {
     padding-left: 0;
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -1822,14 +1828,10 @@ html, body {
   display: block;
 }
 
-.square-img-wrapper.transparent {
-  border: 1px solid #39415C;
-  background-color: white;
-}
 
 .square-label {
   margin-top: clamp(0.75rem, 2vw, 1.5rem); /* responsive top margin */
-  font-size: clamp(0.5rem, 1.5vw, 0.7rem); 
+  font-size: clamp(12px, 1.5vw, 13px);   /* responsive font-size */
   line-height: 1.3;
   color: #39415C;
   font-family: 'Gotham', sans-serif;
@@ -1936,23 +1938,21 @@ html, body {
   display: block;
 }
 
-.square2-img-wrapper.transparent {
-  background-color: white;
-  border: 1px solid #39415C;
-}
+
 
 .square2-label {
-  margin-top: clamp(0.75rem, 2vw, 1.5rem); /* responsive spacing */
-  font-size: clamp(0.625rem, 1.5vw, 0.7rem);     /* responsive font size */
-  line-height: 1.3;
+  margin-top: clamp(30px, 1.5vw, 30px);  
+  font-size: clamp(12px, 1.5vw, 13px); 
   color: #39415C;
   font-family: 'Gotham', sans-serif;
   text-align: left;
   width: 100%;
+
 }
 
 /* Placeholder: invisible but keeps layout space */
-.square2-item.invisible {
+.square2-item.invisible1,
+.square2-item.invisible2 {
   visibility: hidden;
 }
 
@@ -1996,14 +1996,11 @@ html, body {
   display: block;
 }
 
-.square3-img-wrapper.transparent {
-  border: 1px solid #39415C;
-  background-color: white;
-}
+
 
 .square3-label {
   margin-top: clamp(0.75rem, 2vw, 1.5rem); /* responsive top margin */
-  font-size: clamp(0.5rem, 1.5vw, 0.7rem); 
+  font-size: clamp(12px, 1.5vw, 13px); 
   line-height: 1.3;
   color: #39415C;
   font-family: 'Gotham', sans-serif;
@@ -2011,11 +2008,295 @@ html, body {
   width: 100%;
 }
 
+/* === ROW 3 === */
+
+
+
+/* === ROW 4 === */
+.square-row4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.2rem, 2vw, 2rem);
+  padding: 0 81px;
+  box-sizing: border-box;
+  margin-top: clamp(2rem, 5vw, 4rem); /* responsive margin-top */
+}
+
+/* === RIGHT: Big Square === */
+.square4-right-wrapper {
+  width: calc((100% - 1.5rem) / 2); /* 50% width minus half the total gap */
+  flex-shrink: 0;
+}
+
+.square4-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.square4-right-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EAEAEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.square4-right-img-wrapper img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === LEFT: 2×2 Small Squares === */
+.square-grid-left {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  box-sizing: border-box;
+  flex: 1 1 0;
+}
+
+/* Grid Items */
+.square4-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.square4-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EAEAEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.square4-img-wrapper img {
+  width: 63%;
+  height: 63%;
+  object-fit: cover;
+  display: block;
+}
+
+.square4-label {
+  margin-top: clamp(30px, 1.5vw, 30px);
+  font-size: clamp(12px, 1.5vw, 13px);
+  color: #39415C;
+  font-family: 'Gotham', sans-serif;
+  text-align: left;
+  width: 100%;
+}
+
+/* Move the 4th square up slightly */
+.square-grid-left .square4-item:nth-child(4) {
+  margin-top: -2rem;
+}
+
+/* Placeholder: invisible but keeps layout space */
+.square4-item.invisible1,
+.square4-item.invisible2 {
+  visibility: hidden;
+}
+
+
+
+/* ABOUT PAGE */
+/* === ABOUT INTRO SECTION === */
+.about-intro-section {
+  display: flex;
+  padding: 0 81px;
+  margin-top: clamp(2rem, 5vw, 4rem);
+  box-sizing: border-box;
+}
+
+/* Even split */
+.about-left,
+.about-right {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* Title on left */
+.about-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #39415C;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* Image on right */
+.about-pimage2 {
+  margin-top: 40%;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Divider under section */
+.about-divider {
+  height: 1px;
+  background-color: #39415C;
+  opacity: 0.8;
+  border: none;
+  margin: 2rem 81px 0;
+}
+
+
+
+.aboutme-section {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 5vw, 3rem);
+  padding: 0 81px;
+  margin-top: clamp(1rem, 5vw, 2rem);
+  margin-bottom: clamp(10rem, 8vw, 14rem);
+  
+  box-sizing: border-box;
+}
+
+.aboutme-left, .aboutme-right {
+  flex: 1;
+}
+
+/* Left Side: Label */
+.aboutme-heading {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: #39415C;
+  font-family: 'Gotham', sans-serif;
+}
+
+/* Right Side: Two-column text */
+.aboutme-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  font-family: 'Gotham', sans-serif;
+  font-size: clamp(13px, 2.5vw, 14px);
+  color: #39415C;
+  line-height: 1.6;
+}
 
 
 
 
 
+
+
+
+
+
+
+/* === ROW 4 (Mirror of Row 2) === */
+.square-row4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.2rem, 2vw, 2rem);
+  padding: 0 81px;
+  box-sizing: border-box;
+  margin-top: clamp(2rem, 5vw, 4rem); /* responsive margin-top */
+}
+
+/* === RIGHT: Big Square (Mirrored) === */
+.square4-right-wrapper {
+  width: calc((100% - 1.5rem) / 2); /* 50% of row width minus half the total gap */
+  flex-shrink: 0;
+}
+
+.square4-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.square4-right-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EAEAEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.square4-right-img-wrapper img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === LEFT: 2×2 Small Squares (Mirrored) === */
+.square-grid-left {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  box-sizing: border-box;
+  flex: 1 1 0;
+}
+
+
+ 
+.square4-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.square4-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EAEAEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.square4-img-wrapper img {
+  width: 63%;
+  height: 63%;
+  object-fit: cover;
+  display: block;
+}
+
+.square4-label {
+  margin-top: clamp(30px, 1.5vw, 30px);  /* same as row2 */
+  font-size: clamp(12px, 1.5vw, 13px); 
+  color: #39415C;
+  font-family: 'Gotham', sans-serif;
+  text-align: left;
+  width: 100%;
+}
+
+/* Move the 3th square up slightly */
+.square-grid-left .square4-item:nth-child(3) {
+  margin-top: -1.5rem;
+}
+
+/* Placeholder: invisible but keeps layout space */
+.square4-item.invisible1,
+.square4-item.invisible2 {
+  visibility: hidden;
+}
+
+/* == ROW 4 == */
 
 
 
@@ -2025,6 +2306,13 @@ html, body {
 
 /* === Medium screen: 2-column layout === */
 @media (max-width: 1024px) {
+
+
+
+
+
+  
+
   .square-row2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2089,6 +2377,8 @@ html, body {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 1.5rem;
   }
+
+
   .square-row2 {
     display: flex;
     flex-direction: column;
@@ -2111,6 +2401,30 @@ html, body {
     width: 100%;
   }
 
+
+
+  .square-row4 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+  }
+
+  .square4-right-wrapper {
+    width: 100%;
+  }
+
+  .square-grid-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .square4-item {
+    width: 100%;
+  }
+
   
   .cs-divider {
     display: none;  /* === Divider === */
@@ -2126,5 +2440,11 @@ html, body {
 
   
 }
+
+
+
+
+
+
 
 
