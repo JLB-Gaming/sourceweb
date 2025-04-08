@@ -2253,7 +2253,7 @@ html, body {
   justify-content: space-between;
   padding: 0 81px;
   gap: clamp(1.5rem, 5vw, 3rem);
-  margin-bottom: clamp(6rem, 6vw, 8rem);
+  margin-bottom: clamp(8rem, 8vw, 12rem);
   box-sizing: border-box;
 }
 
