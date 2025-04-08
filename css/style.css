@@ -9,10 +9,42 @@ html {
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
-    background-color: white;
-    font-family: "Gotham", sans-serif;
-  }
+  font-family: 'Gotham', sans-serif;
+  background-color: white;
+}
+
 
 
 /* Hide mobile header by default (desktop) */
@@ -58,7 +90,7 @@ body {
   text-decoration: none;
   color: #39415C;
   font-size: 1.06rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* Underline animation */
@@ -87,7 +119,7 @@ body {
   text-align: center;
   margin: 0;
   font-size: 1.125rem;
-  font-family: "Gotham", sans-serif;
+  font-weight: 700; 
   color: #39415C;
 }
 
@@ -2107,6 +2139,136 @@ html, body {
   visibility: hidden;
 }
 
+/* === ROW 4 === */
+
+
+
+
+/* === ROW 5 === */
+
+.square-row5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.2rem, 2vw, 2rem);
+  padding: 0 81px;
+  box-sizing: border-box;
+  margin-top: clamp(2rem, 5vw, 4rem); /* responsive margin-top */
+}
+
+.square5-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.square-row5 .square5-item:nth-child(2) .square5-img-wrapper img {
+  width: 60%;
+  height: 60%;
+}
+
+.square-row5 .square5-item:nth-child(4) .square5-img-wrapper img {
+  width: 60%;
+  height: 60%;
+}
+
+
+.square5-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keeps square shape */
+  background-color: #EAEAEE;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square5-img-wrapper img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+.square5-label {
+  margin-top: clamp(0.75rem, 2vw, 1.5rem); /* responsive top margin */
+  font-size: clamp(12px, 1.5vw, 13px); 
+  line-height: 1.3;
+  color: #39415C;
+  font-family: 'Gotham', sans-serif;
+  text-align: left;
+  width: 100%;
+}
+/* === ROW 5 END === */
+
+
+
+
+/* = cshowcase infosec = */
+
+/* Content grid */
+.mbottom-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 81px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Use ::before and ::after for the 2 vertical lines */
+.with-vertical-lines::before,
+.with-vertical-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+/* First vertical line: between column 1 and 2 */
+.with-vertical-lines::before {
+  left: calc((100% - 162px) / 3 + 81px);
+}
+
+/* Second vertical line: between column 2 and 3 */
+.with-vertical-lines::after {
+  left: calc(((100% - 162px) / 3) * 2 + 81px);
+}
+
+
+/* Text styling */
+.mbottom-column {
+  padding: 0 0rem 0rem;
+  box-sizing: border-box;
+  color: #39415C;
+}
+
+.mbottom-column h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.mbottom-column p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  max-width: 19rem;
+}
+
+.shift-right2 {
+  padding-left: 2.5rem;
+}
+
+.shift-right3 {
+  padding-left: 1.5rem;
+}
+
+
 
 
 /* ABOUT PAGE */
@@ -2269,6 +2431,7 @@ html, body {
   object-fit: cover;
 }
 
+/* == ABOUT PAGE END == */
 
 
 
@@ -2280,6 +2443,7 @@ html, body {
   padding: 0 81px;
   box-sizing: border-box;
   margin-top: clamp(2rem, 5vw, 4rem); /* responsive margin-top */
+  
 }
 
 /* === RIGHT: Big Square (Mirrored) === */
@@ -2446,6 +2610,11 @@ html, body {
   }
 
   .square-row3 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+  }
+
+  .square-row5 {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 1.5rem;
   }
