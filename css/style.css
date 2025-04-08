@@ -2161,8 +2161,7 @@ html, body {
   gap: clamp(1.5rem, 5vw, 3rem);
   padding: 0 81px;
   margin-top: clamp(1rem, 5vw, 2rem);
-  margin-bottom: clamp(10rem, 8vw, 14rem);
-  
+  margin-bottom: clamp(14rem, 8vw, 16rem);
   box-sizing: border-box;
 }
 
@@ -2190,9 +2189,79 @@ html, body {
   line-height: 1.6;
 }
 
+.aboutme-divider {
+  height: 1px;
+  background-color: #39415C;
+  opacity: 0.8;
+  border: none;
+  margin: 2rem 81px 0;
+}
 
 
+.workshop-title-section {
+  padding: 0 81px;
+  margin-top: clamp(1rem, 5vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  box-sizing: border-box;
+}
 
+.workshop-heading {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: #39415C;
+  font-family: 'Gotham', sans-serif;
+}
+
+
+.workshop-split-section {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 5vw, 3rem);
+  padding: 0 81px;
+  margin-top: clamp(8rem, 6vw, 10rem);
+
+  margin-bottom: clamp(4rem, 6vw, 8rem);
+  box-sizing: border-box;
+}
+
+/* LEFT: Full image column */
+.workshop-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.workshop-date {
+  font-size: 48px;
+  font-family: 'Gotham', sans-serif;
+  color: #39415C;
+  margin-bottom: 0.8rem;
+}
+
+.workshop-img {
+  margin-top: 20%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT */
+.workshop-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.workshop-description {
+  font-size: 77%;
+  font-family: 'Gotham', sans-serif;
+  color: #39415C;
+  line-height: 77px;
+  margin: 0;
+}
 
 
 
