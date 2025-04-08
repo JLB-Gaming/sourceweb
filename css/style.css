@@ -369,6 +369,7 @@ html, body {
 }
 
 .header-button button {
+  font-family: 'Gotham', sans-serif;
   width: 9.4rem;
   height: 3rem;
   font-size: 0.8rem;
@@ -377,21 +378,23 @@ html, body {
   background-color: #39415C;
   color: white;
   border: none;
-  font-family: 'Raleway', sans-serif;
   cursor: pointer;
 
+  transition: font-size 0.3s ease, font-weight 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
+
 .header-button button:hover {
+  font-family: 'Gotham', sans-serif;
+
   width: 9.4rem;
   height: 3rem;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   letter-spacing: 0.08rem;
   background-color: #EAEAEE;
   color: #39415C;
   border: 2px solid #39415C; 
-  font-family: 'Raleway', sans-serif;
   cursor: pointer;
   transition-duration: 0.15s;
 
@@ -401,6 +404,7 @@ html, body {
 .header-button-link {
   text-decoration: none;
 }
+
 
 
 .img-harrow {
@@ -1756,13 +1760,16 @@ html, body {
 }
 
 .text-title {
+  font-family: 'Gotham', sans-serif;
   font-size: clamp(12px, 1.5vw, 16px);   /* responsive font-size */
-  font-weight: bold;
+  font-weight: 600;
   margin: 0 0 2rem;
   color: #39415C;
 }
 
 .text-description {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 400;
   font-size: clamp(12px, 1.5vw, 16px);   /* responsive font-size */
   color: #39415C;
   line-height: 1.6;
@@ -1776,23 +1783,25 @@ html, body {
   background-color: #39415C;
   color: white;
   border: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Gotham', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   cursor: pointer;
+
+  transition: font-size 0.3s ease, font-weight 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 
 .split-right button:hover {
   width: 9.4rem;
   height: 3rem;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   letter-spacing: 0.08rem;
   background-color: #ffffff;
   color: #39415C;
   border: 2px solid #39415C;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Gotham', sans-serif;
   cursor: pointer;
   transition-duration: 0.15s;
 
@@ -2339,9 +2348,10 @@ html, body {
 
 /* Title on left */
 .about-title {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 700;
   font-size: clamp(2rem, 5vw, 3rem);
   color: #39415C;
-  font-weight: 700;
   letter-spacing: 0.06rem;
   margin-bottom: 2.5rem;
   text-transform: uppercase;
@@ -2383,19 +2393,20 @@ html, body {
 
 /* Left Side: Label */
 .aboutme-heading {
+  font-family: 'Gotham', sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1rem;
   color: #39415C;
-  font-family: 'Gotham', sans-serif;
 }
 
 /* Right Side: Two-column text */
 .aboutme-columns {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 400;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  font-family: 'Gotham', sans-serif;
   font-size: clamp(13px, 2.5vw, 14px);
   color: #39415C;
   line-height: 1.6;
@@ -2418,11 +2429,11 @@ html, body {
 }
 
 .workshop-heading {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 700;
   font-size: 14px;
-  font-weight: 600;
   letter-spacing: 0.1rem;
   color: #39415C;
-  font-family: 'Gotham', sans-serif;
 }
 
 
@@ -2442,8 +2453,9 @@ html, body {
 }
 
 .workshop-date {
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1.8rem, 6vw, 4rem);
   font-family: 'Gotham', sans-serif;
+  font-weight: 600;
   color: #39415C;
   margin: 0;
 }
@@ -2451,6 +2463,7 @@ html, body {
 .workshop-description {
   font-size: clamp(1.2rem, 6vw, 4.8rem);
   font-family: 'Gotham', sans-serif;
+  font-weight: 600;
   color: #39415C;
   line-height: 1.2;
   margin: 0;
