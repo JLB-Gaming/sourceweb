@@ -78,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 25px;
+  gap: 20px;
   flex: 1;
 }
 
@@ -87,7 +87,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 25px;
+  gap: 20px;
 }
 
 /* Base link styles */
@@ -96,7 +96,7 @@ body {
   position: relative;
   text-decoration: none;
   color: #39415C;
-  font-size: 1.06rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -1464,6 +1464,7 @@ html, body {
 
 
 /* DRAGON Section wrapper */
+/* Section wrapper */
 .example-section-c3 {
   padding: 0rem 5rem;
 }
@@ -1472,7 +1473,7 @@ html, body {
 .example-layout-c3 {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2rem;
 }
 
@@ -1480,14 +1481,14 @@ html, body {
 .vertical-line-label-group-c3 {
   position: relative;
   margin-left: 0rem ;
-  height: 50rem; /* total height of wrapper */
+  height: auto; /* total height of wrapper */
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 5rem;
 }
 
 .vertical-label-c3 {
-   font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham', sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
   writing-mode: vertical-rl;
   transform: rotate(180deg) translateY(-45%);
@@ -1506,17 +1507,33 @@ html, body {
   opacity: 0.4;
 }
 
-
 /* Right side: cards aligned horizontally */
+.example-cards-wrapper-c3 {
+  flex: 1;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+
+@media (min-width: 769px) {
+  .example-cards-wrapper-c3 {
+    max-width: calc(100% - 10rem); /* Only apply on desktop */
+  }
+}
+
 .example-cards-c3 {
-  margin-top: 8.1rem;
+  margin-top: 10%;
+  margin-bottom: 10%;
   display: flex;
-  flex-direction: row; /*  horizontal layout */
-  gap: 2rem; /* Adjust spacing between cards here */
+  justify-content: flex-end; /* align cards to the right */
+  flex-wrap: wrap;           /* allow wrapping */
+  gap: 2rem;
+  box-sizing: border-box;
 }
 
 /* Wrap for each text+card block */
 .example-card-wrapper-c3 {
+  flex: 1 1 21rem; /* grow/shrink as needed */
+  max-width: 21rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1525,22 +1542,19 @@ html, body {
 /* Text above the card */
 .example-desc-c3 {
   font-family: 'Gotham', sans-serif;
-
-  font-size: 0.85rem;
+  font-size: clamp(10px, 2vw, 13px); 
   color: #39415C;
   line-height: 1.4;
   font-weight: 600;
   text-align: left;
-  width: 20rem; /* match card width */
+  width: 100%;
   margin-bottom: 1rem;
 }
 
-
-
 /* The grey rectangle card */
 .example-card-c3 {
-  width: 19rem;
-  height: 28rem;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   background-color: #EAEAEE;
   padding: 1rem;
   display: flex;
@@ -1549,18 +1563,16 @@ html, body {
   overflow: hidden;
 }
 
-
-/* for ALL images */
-.example-card-3 img {
+/* All images */
+.example-card-c3 img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-
 .dragon-image1 {
   display: block;
-  max-width: 100%;
+  max-width: 82%;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
@@ -1568,7 +1580,7 @@ html, body {
 
 .dragon-image2 {
   display: block;
-  max-width: 86%;
+  max-width: 90%;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
@@ -1576,7 +1588,7 @@ html, body {
 
 .dragon-image3 {
   display: block;
-  max-width: 78%;
+  max-width: 92%;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
@@ -2862,6 +2874,10 @@ html, body {
   .dragon-lines{
     padding: 0 1.5rem ;
   }
+  .mbottom-lines{
+    padding: 0 1.5rem ;
+  }
+
 
   .example-section {
     padding: 0rem 1.5rem;
@@ -3046,7 +3062,66 @@ html, body {
       padding-left: 0;
     }
   
+
+
+
+
+  /* mbottom section RESPONSIVE */ 
+   .mbottom-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem 1.5rem; /* Mobile padding */
+    }
   
+    /* Hide vertical lines */
+    .with-vertical-lines::before,
+    .with-vertical-lines::after {
+      display: none;
+    }
+  
+    /* Horizontal lines between each text block */
+    .mbottom-column {
+      position: relative;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  
+    .mbottom-column:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  
+    /* Reset text styles for mobile */
+    .mbottom-column h4 {
+      font-size: clamp(12px, 2vw, 14px);
+      margin-bottom: 3%;
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+  
+    .mbottom-column p {
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+  
+    .shift-right2,
+    .shift-right3 {
+      padding-left: 0;
+    }
+  
+  
+
+
+
+
+
+
+    
   .vertical-extension-line {
    left: 5rem; 
   }
