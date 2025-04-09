@@ -774,7 +774,7 @@ html, body {
 .example-layout {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2rem;
 }
 
@@ -782,16 +782,17 @@ html, body {
 .vertical-line-label-group {
   position: relative;
   margin-left: 0rem ;
-  height: 50rem; /* total height of wrapper */
+  height: auto; /* total height of wrapper */
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 5rem;
 }
 
 .vertical-label {
+  font-family: 'Gotham', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
   writing-mode: vertical-rl;
-  transform: rotate(180deg) translateY(-5rem);
-  font-size: 3rem;
+  transform: rotate(180deg) translateY(-45%);
   font-weight: 700;
   letter-spacing: 2px;
   color: #39415C;
@@ -808,16 +809,34 @@ html, body {
 }
 
 
+
 /* Right side: cards aligned horizontally */
+.example-cards-wrapper {
+  flex: 1;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+
+@media (min-width: 769px) {
+  .example-cards-wrapper {
+    max-width: calc(100% - 10rem); /* Only apply on desktop */
+  }
+}
+
 .example-cards {
-  margin-top: 8.1rem;
+  margin-top: 10%;
+  margin-bottom: 10%;
   display: flex;
-  flex-direction: row; /*  horizontal layout */
-  gap: 2rem; /* Adjust spacing between cards here */
+  justify-content: flex-end; /* align cards to the right */
+  flex-wrap: wrap;           /* allow wrapping */
+  gap: 2rem;
+  box-sizing: border-box;
 }
 
 /* Wrap for each text+card block */
 .example-card-wrapper {
+  flex: 1 1 21rem; /* grow/shrink as needed */
+  max-width: 21rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -826,12 +845,11 @@ html, body {
 /* Text above the card */
 .example-desc {
   font-family: 'Gotham', sans-serif;
-  font-size: 0.85rem;
+  font-size: clamp(10px, 2vw, 13px); 
   color: #39415C;
   line-height: 1.4;
   font-weight: 600;
   text-align: left;
-  max-width: 20rem;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -839,8 +857,8 @@ html, body {
 
 /* The grey rectangle card */
 .example-card {
-  width: 19rem;
-  height: 28rem;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   background-color: #EAEAEE;
   padding: 1rem;
   display: flex;
@@ -848,7 +866,6 @@ html, body {
   justify-content: center;
   overflow: hidden;
 }
-
 
 /* for ALL images */
 .example-card img {
@@ -1110,7 +1127,7 @@ html, body {
 .example-layout-c2 {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2rem;
 }
 
@@ -1118,17 +1135,17 @@ html, body {
 .vertical-line-label-group-c2 {
   position: relative;
   margin-left: 0rem ;
-  height: 50rem; /* total height of wrapper */
+  height: auto; /* total height of wrapper */
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 5rem;
 }
 
 .vertical-label-c2 {
   font-family: 'Gotham', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
   writing-mode: vertical-rl;
-  transform: rotate(180deg) translateY(-5rem);
-  font-size: 3rem;
+  transform: rotate(180deg) translateY(-45%);
   font-weight: 700;
   letter-spacing: 2px;
   color: #39415C;
@@ -1144,17 +1161,33 @@ html, body {
   opacity: 0.4;
 }
 
-
 /* Right side: cards aligned horizontally */
+.example-cards-wrapper-c2 {
+  flex: 1;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+
+@media (min-width: 769px) {
+  .example-cards-wrapper-c2 {
+    max-width: calc(100% - 10rem); /* Only apply on desktop */
+  }
+}
+
 .example-cards-c2 {
-  margin-top: 8.1rem;
+  margin-top: 10%;
+  margin-bottom: 10%;
   display: flex;
-  flex-direction: row; /*  horizontal layout */
-  gap: 2rem; /* Adjust spacing between cards here */
+  justify-content: flex-end; /* align cards to the right */
+  flex-wrap: wrap;           /* allow wrapping */
+  gap: 2rem;
+  box-sizing: border-box;
 }
 
 /* Wrap for each text+card block */
 .example-card-wrapper-c2 {
+  flex: 1 1 21rem; /* grow/shrink as needed */
+  max-width: 21rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1163,21 +1196,19 @@ html, body {
 /* Text above the card */
 .example-desc-c2 {
   font-family: 'Gotham', sans-serif;
-  font-size: 0.85rem;
+  font-size: clamp(10px, 2vw, 13px); 
   color: #39415C;
   line-height: 1.4;
   font-weight: 600;
   text-align: left;
-  width: 20rem; /* match card width */
+  width: 100%;
   margin-bottom: 1rem;
 }
 
-
-
 /* The grey rectangle card */
 .example-card-c2 {
-  width: 19rem;
-  height: 28rem;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   background-color: #EAEAEE;
   padding: 1rem;
   display: flex;
@@ -1186,18 +1217,16 @@ html, body {
   overflow: hidden;
 }
 
-
 /* for ALL images */
-.example-card-2 img {
+.example-card-c2 img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-
 .lotus-image1 {
   display: block;
-  max-width: 80%;
+  max-width: 82%;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
@@ -1205,7 +1234,7 @@ html, body {
 
 .lotus-image2 {
   display: block;
-  max-width: 88%;
+  max-width: 90%;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
@@ -1213,12 +1242,11 @@ html, body {
 
 .lotus-image3 {
   display: block;
-  max-width: 85%;
+  max-width: 92%;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
 }
-
 
 
 /* mbottom section */
@@ -1459,10 +1487,10 @@ html, body {
 }
 
 .vertical-label-c3 {
-  font-family: 'Gotham', sans-serif;
+   font-family: 'Gotham', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
   writing-mode: vertical-rl;
-  transform: rotate(180deg) translateY(-5rem);
-  font-size: 3rem;
+  transform: rotate(180deg) translateY(-45%);
   font-weight: 700;
   letter-spacing: 2px;
   color: #39415C;
@@ -2835,8 +2863,45 @@ html, body {
     padding: 0 1.5rem ;
   }
 
+  .example-section {
+    padding: 0rem 1.5rem;
+  }
+  
+  .example-section-c2 {
+    padding: 0rem 1.5rem;
+  } 
+  .example-section-c3 {
+    padding: 0rem 1.5rem;
+  } 
+
 
  
+  .example-cards-wrapper {
+    max-width: 100% !important;
+    width: 100%;
+    padding-left: 10%;
+    box-sizing: border-box;
+  }
+  .example-cards-wrapper-c2 {
+    max-width: 100% !important;
+    width: 100%;
+    padding-left: 10%;
+    box-sizing: border-box;
+  }
+  .example-cards-wrapper-c3 {
+    max-width: 100% !important;
+    width: 100%;
+    padding-left: 10%;
+    box-sizing: border-box;
+  }
+ 
+ 
+
+
+
+
+
+
     /* motif section */
     .motif-content {
       display: flex;
@@ -2884,8 +2949,7 @@ html, body {
     }
 
   
-    /* motif section */
-
+  /* lotus section */
     .lotus-content {
       display: flex;
       flex-direction: column;
@@ -2932,7 +2996,78 @@ html, body {
     .shift-right3 {
       padding-left: 0;
     }
+
+
+  /* dragon section */
+    .dragon-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem 1.5rem; /* Mobile padding */
+    }
   
+    /* Hide vertical lines */
+    .with-vertical-lines::before,
+    .with-vertical-lines::after {
+      display: none;
+    }
+  
+    /* Horizontal lines between each text block */
+    .dragon-column {
+      position: relative;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  
+    .dragon-column:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  
+    /* Reset text styles for mobile */
+    .dragon-column h4 {
+      font-size: clamp(12px, 2vw, 14px);
+      margin-bottom: 3%;
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+  
+    .dragon-column p {
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+  
+    .shift-right2,
+    .shift-right3 {
+      padding-left: 0;
+    }
+  
+  
+  .vertical-extension-line {
+   left: 5rem; 
+  }
+  
+  .vertical-extension-line-c2 {
+    left: 5rem; 
+  }
+
+  .vertical-extension-line-c3 {
+    left: 5rem; 
+  }
+     
+     
+    
+
+  
+
+
+
+
+
 
 
 
@@ -3049,8 +3184,20 @@ html, body {
 
 
 
-
-
-
+@media (max-width: 768px) {
+  .vertical-extension-line {
+    left: 4rem; 
+   }
+   
+   .vertical-extension-line-c2 {
+     left: 4rem; 
+   }
+ 
+   .vertical-extension-line-c3 {
+     left: 4rem; 
+   }
+      
+      
+}
 
 
