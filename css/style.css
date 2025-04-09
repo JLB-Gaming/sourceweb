@@ -384,6 +384,11 @@ html, body {
 }
 
 
+.img-harrow {
+  height: 1rem;      /* match button scale */
+  display: block;
+}
+
 .header-button button:hover {
   font-family: 'Gotham', sans-serif;
 
@@ -406,11 +411,36 @@ html, body {
 }
 
 
+@media (max-width: 1080px) {
+  .header-button button {
+    width: 8.8rem;
+    height: 2.75rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.06rem;
+  }
 
-.img-harrow {
-  height: 1rem;      /* match button scale */
-  display: block;
+  .img-harrow {
+    height: 0.9rem;
+  }
 }
+
+@media (max-width: 919px) {
+  .header-button button {
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .img-harrow {
+    height: 0.8rem;
+  }
+}
+
+
+
+
+
 
 @media (max-width: 768px) {
   .content {
@@ -1714,7 +1744,7 @@ html, body {
   gap: 20px;
   cursor: pointer;
   width: fit-content;
-  margin: 9.5% 0 0.625rem;
+  margin: 9.5% 0 0.7%;
   
 }
 
@@ -1727,18 +1757,19 @@ html, body {
 
 /* Text styling */
 .button-text {
-  font-size: 90%;
-  font-weight: 600;
+  font-family: 'Gotham', sans-serif;
+  font-size: clamp(12px, 2.5vw, 14px);
+  font-weight: 700;
   color: #39415C;
   margin: 0; /* Important: remove margin to bring closer to line */
 }
 
 /* Arrow icon */
 .arrow-up-right {
-  width: 1rem;
-  height: 1rem;
+  width: clamp(10px, 2vw, 16px);
+  height: clamp(10px, 2vw, 16px);
   object-fit: contain;
-  margin: 0; /* Just in case */
+  margin: 0;
 }
 
 /* The horizontal line */
@@ -2530,9 +2561,9 @@ html, body {
 
 /* Divider under section */
 .about-divider {
-  height: 1px;
+  height: 2px;
   background-color: #39415C;
-  opacity: 0.8;
+  opacity: 0.7;
   border: none;
   margin: 2rem 81px 0;
 }
@@ -2570,15 +2601,15 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  font-size: clamp(13px, 2.5vw, 14px);
+  font-size: clamp(12px, 2.5vw, 14px);
   color: #39415C;
   line-height: 1.6;
 }
 
 .aboutme-divider {
-  height: 1px;
+  height: 2px;
   background-color: #39415C;
-  opacity: 0.8;
+  opacity: 0.7;
   border: none;
   margin: 2rem 81px 0;
 }
