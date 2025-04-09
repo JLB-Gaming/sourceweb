@@ -649,7 +649,8 @@ html, body {
 }
 
 .collection-title1 {
-  font-size: 3rem;
+  font-family: 'Gotham', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #39415C;
   font-weight: 700;
   letter-spacing: 0.06rem;
@@ -675,8 +676,11 @@ html, body {
   object-fit: contain;
 }
 
-
-
+@media (max-width: 480px) {
+  .collection-image1 {
+    width: 210px; /* or whatever width 50% was at 480px */
+  }
+}
 
 
 /* Horizontal line containers */
@@ -706,6 +710,8 @@ html, body {
   position: relative;
   box-sizing: border-box;
 }
+
+
 
 /* Use ::before and ::after for the 2 vertical lines */
 .with-vertical-lines::before,
@@ -739,28 +745,23 @@ html, body {
 
 .motif-column h4 {
   font-family: 'Gotham', sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(12px, 2vw, 15px); 
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5%;
   text-transform: uppercase;
+  max-width: 75%;
 }
 
 .motif-column p {
   font-family: 'Gotham', sans-serif;
+  font-size: clamp(10px, 2vw, 13px); 
+
   font-weight: 400;
-  font-size: 0.8rem;
   line-height: 1.6;
-  max-width: 19rem;
+  max-width: 75%;
 }
 
-.shift-right2 {
-  padding-left: 2.5rem; /* or adjust to whatever looks good */
-}
-
-.shift-right3 {
-  padding-left: 1.5rem; /* or adjust to whatever looks good */
-}
 
 
 
@@ -944,8 +945,7 @@ html, body {
 
 .mbottom-column h4 {
   font-family: 'Gotham', sans-serif;
-
-  font-size: 0.8rem;
+  font-size: clamp(12px, 2vw, 15px); 
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
@@ -985,7 +985,7 @@ html, body {
 
 .collection-title2 {
   font-family: 'Gotham', sans-serif;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #39415C;
   font-weight: 700;
   letter-spacing: 0.06rem;
@@ -1010,6 +1010,13 @@ html, body {
   width: 51%;
   object-fit: contain;
 }
+
+@media (max-width: 480px) {
+  .collection-image2 {
+    width: 210px; /* or whatever width 50% was at 480px */
+  }
+}
+
 
 
 
@@ -1073,27 +1080,21 @@ html, body {
 
 .lotus-column h4 {
   font-family: 'Gotham', sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(12px, 2vw, 15px); 
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+  max-width: 75%;
+
 }
 
 .lotus-column p {
   font-family: 'Gotham', sans-serif;
+  font-size: clamp(10px, 2vw, 13px); 
   font-weight: 400;
-  font-size: 0.8rem;
   line-height: 1.6;
-  max-width: 19rem;
-}
-
-.shift-right2 {
-  padding-left: 2.5rem; /* or adjust to whatever looks good */
-}
-
-.shift-right3 {
-  padding-left: 1.5rem; /* or adjust to whatever looks good */
+  max-width: 75%;
 }
 
 
@@ -1279,8 +1280,8 @@ html, body {
 }
 
 .mbottom-column h4 {
-  
-  font-size: 0.8rem;
+  font-family: 'Gotham', sans-serif;
+  font-size: clamp(12px, 2vw, 15px); 
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
@@ -1314,8 +1315,7 @@ html, body {
 
 .collection-title3 {
   font-family: 'Gotham', sans-serif;
-
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #39415C;
   font-weight: 700;
   letter-spacing: 0.06rem;
@@ -1339,6 +1339,12 @@ html, body {
 .collection-image3 {
   width: 60%;
   object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .collection-image3 {
+    width: 220px; /* or whatever width 50% was at 480px */
+  }
 }
 
 
@@ -1402,19 +1408,21 @@ html, body {
 
 .dragon-column h4 {
   font-family: 'Gotham', sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(12px, 2vw, 15px); 
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+  max-width: 75%;
+
 }
 
 .dragon-column p {
   font-family: 'Gotham', sans-serif;
+  font-size: clamp(10px, 2vw, 13px); 
   font-weight: 400;
-  font-size: 0.8rem;
   line-height: 1.6;
-  max-width: 19rem;
+  max-width: 75%;
 }
 
 .shift-right2 {
@@ -2258,6 +2266,120 @@ html, body {
 
 
 
+/* === ROW 6 === */
+.square-row6 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.2rem, 2vw, 2rem);
+  padding: 0 81px;
+  box-sizing: border-box;
+  margin-top: clamp(2rem, 5vw, 4rem); /* responsive margin-top */
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+/* === LEFT: Big Square === */
+
+.big-square {
+  flex: 0 0 624px; /* Fixed width on larger screens */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .big-square {
+    flex: 1 1 100%;
+  }
+}
+
+.square6-left-wrapper {
+  width: calc((100% - 1.5rem) / 2); /* 50% of row width minus half the total gap */
+  flex-shrink: 0;
+}
+
+.square6-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.square6-left-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EAEAEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.square6-left-img-wrapper img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === RIGHT: 2×2 Small Squares === */
+.square-grid-right6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  box-sizing: border-box;
+  flex: 1 1 0;
+}
+
+/* Stretch all items and keep layout consistent */
+.square6-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Move the 4th square up slightly */
+.square-grid-right6 .square6-item:nth-child(4) {
+  margin-top: -2rem;
+}
+
+.square6-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EAEAEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.square6-img-wrapper img {
+  width: 63%;
+  height: 63%;
+  object-fit: cover;
+  display: block;
+}
+
+.square6-label {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 400;
+  margin-top: clamp(30px, 1.5vw, 30px);  
+  font-size: clamp(12px, 1.5vw, 13px); 
+  color: #39415C;
+  text-align: left;
+  width: 100%;
+}
+
+/* Placeholder: invisible but keeps layout space */
+.square6-item.invisible1,
+.square6-item.invisible2 {
+  visibility: hidden;
+}
+
+/* === ROW 6 END === */
+
+
+
+
 
 /* = cshowcase infosec = */
 
@@ -2607,12 +2729,6 @@ html, body {
 /* === Medium screen: 2-column layout === */
 @media (max-width: 1024px) {
 
-
-
-
-
-  
-
   .square-row2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2647,6 +2763,44 @@ html, body {
     grid-area: item4;
     margin-top: 0;
   }
+
+
+
+  .square-row6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "big item1"
+      "item2 item4";
+    gap: 1.5rem;
+  }
+  
+  .square6-left-wrapper {
+    grid-area: big;
+    width: 100%;
+  }
+  
+  .square-grid-right6 {
+    display: contents; /* allows grid children to place directly into .square-row6 */
+  }
+  
+  .square-grid-right6 .square6-item:nth-child(1) {
+    grid-area: item1;
+  }
+  
+  .square-grid-right6 .square6-item:nth-child(2) {
+    grid-area: item2;
+  }
+  
+  .square-grid-right6 .square6-item:nth-child(3) {
+    display: none; /* invisible placeholder hidden */
+  }
+  
+  .square-grid-right6 .square6-item:nth-child(4) {
+    grid-area: item4;
+    margin-top: 0;
+  }
+  
 }
 
 /* === Small screen: stacked layout === */
@@ -2657,6 +2811,130 @@ html, body {
   .collection-section {
     padding: 0.8rem 1.5rem;
   }
+  
+  .collection-feature1{
+    padding: 2rem 1.5rem;
+
+  }
+  .collection-feature2{
+    padding: 2rem 1.5rem;
+
+  }
+  .collection-feature3{
+    padding: 2rem 1.5rem;
+
+  }
+
+  .motif-lines{
+    padding: 0 1.5rem ;
+  }
+  .lotus-lines{
+    padding: 0 1.5rem ;
+  }
+  .dragon-lines{
+    padding: 0 1.5rem ;
+  }
+
+
+ 
+    /* motif section */
+    .motif-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem 1.5rem; /* Mobile padding */
+    }
+  
+    /* Hide vertical lines */
+    .with-vertical-lines::before,
+    .with-vertical-lines::after {
+      display: none;
+    }
+  
+    /* Horizontal lines between each text block */
+    .motif-column {
+      position: relative;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  
+    .motif-column:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  
+    /* Reset text styles for mobile */
+    .motif-column h4 {
+      margin-bottom: 3%;
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+    .motif-column p {
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+
+    .shift-right2,
+    .shift-right3 {
+      padding-left: 0;
+    }
+
+  
+    /* motif section */
+
+    .lotus-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem 1.5rem; /* Mobile padding */
+    }
+  
+    /* Hide vertical lines */
+    .with-vertical-lines::before,
+    .with-vertical-lines::after {
+      display: none;
+    }
+  
+    /* Horizontal lines between each text block */
+    .lotus-column {
+      position: relative;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  
+    .lotus-column:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  
+    /* Reset text styles for mobile */
+    .lotus-column h4 {
+      font-size: clamp(12px, 2vw, 14px);
+      margin-bottom: 3%;
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+  
+    .lotus-column p {
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+  
+    .shift-right2,
+    .shift-right3 {
+      padding-left: 0;
+    }
+  
+
+
 
   .info-section {
     padding: 9px 1.5rem; /* Match mobile padding elsewhere */
@@ -2743,6 +3021,29 @@ html, body {
     display: none;
   }
 
+  
+
+
+  .square-row6 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+  }
+  
+  .square6-left-wrapper {
+    width: 100%;
+  }
+  
+  .square-grid-right6 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .square6-item {
+    width: 100%;
+  }
   
 }
 
