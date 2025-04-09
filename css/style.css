@@ -755,7 +755,7 @@ html, body {
 
 .motif-column p {
   font-family: 'Gotham', sans-serif;
-  font-size: clamp(10px, 2vw, 13px); 
+  font-size: clamp(11px, 2vw, 13px); 
 
   font-weight: 400;
   line-height: 1.6;
@@ -971,10 +971,10 @@ html, body {
 
 .mbottom-column p {
   font-family: 'Gotham', sans-serif;
+  font-size: clamp(11px, 2vw, 13px); 
   font-weight: 400;
-  font-size: 0.8rem;
   line-height: 1.6;
-  max-width: 19rem;
+  max-width: 75%;
 }
 
 .shift-right2 {
@@ -1108,7 +1108,7 @@ html, body {
 
 .lotus-column p {
   font-family: 'Gotham', sans-serif;
-  font-size: clamp(10px, 2vw, 13px); 
+  font-size: clamp(11px, 2vw, 13px); 
   font-weight: 400;
   line-height: 1.6;
   max-width: 75%;
@@ -1317,9 +1317,10 @@ html, body {
 }
 
 .mbottom-column p {
-  font-size: 0.8rem;
+  font-family: 'Gotham', sans-serif;
+  font-size: clamp(11px, 2vw, 13px); 
   line-height: 1.6;
-  max-width: 19rem;
+  max-width: 75%;
 }
 
 .shift-right2 {
@@ -1447,7 +1448,7 @@ html, body {
 
 .dragon-column p {
   font-family: 'Gotham', sans-serif;
-  font-size: clamp(10px, 2vw, 13px); 
+  font-size: clamp(11px, 2vw, 13px); 
   font-weight: 400;
   line-height: 1.6;
   max-width: 75%;
@@ -1655,7 +1656,7 @@ html, body {
 
 .mbottom-column h4 {
   font-family: 'Gotham', sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(12px, 2vw, 15px); 
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
@@ -1664,10 +1665,10 @@ html, body {
 
 .mbottom-column p {
   font-family: 'Gotham', sans-serif;
+  font-size: clamp(11px, 2vw, 13px); 
   font-weight: 400;
-  font-size: 0.8rem;
   line-height: 1.6;
-  max-width: 19rem;
+  max-width: 75%;
 }
 
 .shift-right2 {
@@ -2465,8 +2466,7 @@ html, body {
 
 .mbottom-column h4 {
   font-family: 'Gotham', sans-serif;
-
-  font-size: 0.8rem;
+  font-size: clamp(12px, 2vw, 15px); 
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
@@ -2475,10 +2475,10 @@ html, body {
 
 .mbottom-column p {
   font-family: 'Gotham', sans-serif;
+  font-size: clamp(11px, 2vw, 13px);  
   font-weight: 400;
-  font-size: 0.8rem;
   line-height: 1.6;
-  max-width: 19rem;
+  max-width: 75%;
 }
 
 .shift-right2 {
