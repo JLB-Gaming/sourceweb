@@ -2896,6 +2896,74 @@ html, body {
 
   }
 
+  .about-intro-section {
+    flex-direction: column;
+    margin-top: 5%;
+    padding: 1.5rem;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-pimage2 {
+    margin-top: 4rem; /* reduce space between text and image */
+    width: 35%;
+  }
+
+
+
+
+
+ .about-divider,
+ .aboutme-divider {
+  margin: 1rem 1.5rem 0; 
+ }         
+ 
+ .aboutme-section {
+  flex-direction: column;
+  padding: 0 1.5rem;
+  margin-bottom: 20%;
+}
+
+.aboutme-left,
+.aboutme-right {
+  width: 100%;
+}
+
+.aboutme-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 12%;
+}
+
+.workshop-title-section{
+  padding: 0 1.5rem;
+
+}
+
+.workshop-split-section{
+  flex-direction: column;
+  padding: 0 1.5rem; 
+  gap: 5.5rem;
+  margin-bottom: 13%;    
+}
+.workshop-image-section {
+  flex-direction: column;
+  padding: 0 1.5rem; 
+  gap: 2rem;         
+}
+
+.workshop-left,
+.workshop-right,
+.workshop-image-left,
+.workshop-image-right {
+  width: 100%;
+}
+
+
   .motif-lines{
     padding: 0 1.5rem ;
   }
