@@ -391,7 +391,6 @@ html, body {
 
 .header-button button:hover {
   font-family: 'Gotham', sans-serif;
-
   width: 9.4rem;
   height: 3rem;
   font-size: 0.9rem;
@@ -401,7 +400,6 @@ html, body {
   color: #39415C;
   border: 2px solid #39415C; 
   cursor: pointer;
-  transition-duration: 0.15s;
 
 }
 
@@ -418,6 +416,17 @@ html, body {
     font-size: 0.75rem;
     letter-spacing: 0.06rem;
   }
+  .header-button button:hover {
+    font-family: 'Gotham', sans-serif;
+    width: 8.8rem;
+    height: 2.75rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.06rem;
+    background-color: #EAEAEE;
+    color: #39415C;
+    border: 2px solid #39415C; 
+    cursor: pointer;
+  }
 
   .img-harrow {
     height: 0.9rem;
@@ -430,6 +439,18 @@ html, body {
     height: 2.5rem;
     font-size: 0.7rem;
     letter-spacing: 0.05rem;
+  }
+
+  .header-button button:hover {
+    font-family: 'Gotham', sans-serif;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    background-color: #EAEAEE;
+    color: #39415C;
+    border: 2px solid #39415C; 
+    cursor: pointer;
   }
 
   .img-harrow {
