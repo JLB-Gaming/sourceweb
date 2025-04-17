@@ -157,30 +157,35 @@ body {
   }
 
   .mobile-header {
+    position: relative; /* needed for absolute child */
+    height: 60px; /* or whatever fits your layout */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;  /* center logo */
     align-items: center;
-    padding: 1.8rem 1.5rem; /* Top and horizontal padding */
+    padding: 2.5rem 1.5rem;
   }
   
-  /* Resize icons */
-  .menu-icon img{
+  .menu-icon {
+    position: absolute;
+    top: 1.8rem;   /* match padding top */
+    right: 1.5rem; /* match padding right */
+  }
+  
+  .menu-icon img {
     height: 20px;
     width: auto;
     object-fit: contain;
   }
+  
   .logo-center {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* or flex-end/left depending on layout */
-    text-decoration: none;   /* remove underline if it ever shows */
+    text-decoration: none;
   }
   
   .logo-center img {
     height: 30px;
     width: auto;
     object-fit: contain;
-    display: block; /* avoid extra space below the image */
+    display: block;
   }
   
   .m-header-divider {
@@ -205,11 +210,12 @@ body {
   position: fixed;
   z-index: 9999;
   top: 0;
-  left: 0;
+  right: 0; /* opens from the right */
   background-color: rgba(29, 42, 65, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
 }
+
 
 .overlay-content {
   position: relative;
