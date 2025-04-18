@@ -2737,6 +2737,55 @@ html, body {
   object-fit: cover;
 }
 
+.credit-divider {
+  height: 2px;
+  background-color: #39415C;
+  opacity: 0.7;
+  border: none;
+  margin: 2rem 81px 0;
+}
+
+.credit-title-section {
+  padding: 0 81px;
+  margin-top: clamp(1rem, 5vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  box-sizing: border-box;
+}
+.credit-heading {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.1rem;
+  color: #39415C;
+}
+
+.credit-text-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  padding: 0 81px;
+  margin-top: clamp(1rem, 5vw, 2rem);
+  margin-bottom: clamp(7rem, 8vw, 10rem);
+  flex-wrap: wrap; /* responsive for small screens */
+
+}
+
+
+
+.credit-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.credit-text {
+  font-family: 'Gotham', sans-serif;
+  text-align: left;
+  font-size: clamp(12px, 2.5vw, 14px);
+  font-weight: 400;
+  color: #39415C;
+  line-height: 1.6;
+}
+
 /* == ABOUT PAGE END == */
 
 
@@ -2966,7 +3015,8 @@ html, body {
 
 
  .about-divider,
- .aboutme-divider {
+ .aboutme-divider,
+ .credit-divider {
   margin: 1rem 1.5rem 0; 
  }         
  
@@ -2975,6 +3025,7 @@ html, body {
   padding: 0 1.5rem;
   margin-bottom: 20%;
 }
+
 
 .aboutme-left,
 .aboutme-right {
@@ -3012,6 +3063,14 @@ html, body {
   width: 100%;
 }
 
+.credit-title-section{
+  padding: 0 1.5rem; 
+
+}
+.credit-text-section{
+  padding: 0 1.5rem; 
+  flex-direction: column;
+}
 
   .motif-lines{
     padding: 0 1.5rem ;
