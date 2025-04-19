@@ -210,12 +210,11 @@ body {
   position: fixed;
   z-index: 9999;
   top: 0;
-  right: 0; /* opens from the right */
+  right: 0;
   background-color: rgba(29, 42, 65, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
 }
-
 
 .overlay-content {
   position: relative;
@@ -238,6 +237,12 @@ body {
   color: #ccc;
 }
 
+.overlay a.active {
+  color: #ccc;
+  pointer-events: none;
+  cursor: default;
+}
+
 .overlay .closebtn {
   position: absolute;
   top: 20px;
@@ -246,6 +251,7 @@ body {
   color: white;
   cursor: pointer;
 }
+
 
 
 

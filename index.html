@@ -55,28 +55,46 @@
 	</header>
 
 	<!-- Overlay Navigation (✅ now inside <body>) -->
-		<div id="mobileNavOverlay" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<div class="overlay-content">
-			  <a href="index.html">Home</a>
-			  <a href="cshowcase.html">Collection</a>
-			  <a href="about.html">About</a>
-			</div>
-		  </div>
-		
-		  <!-- Overlay toggle scripts -->
-		  <script>
-			function openNav() {
-			  document.getElementById("mobileNavOverlay").style.width = "100%";
-			}
-		
-			function closeNav() {
-			  document.getElementById("mobileNavOverlay").style.width = "0%";
-			}
-
-			
-		  </script>
-
+<!-- Overlay Navigation -->
+<!-- Overlay Navigation -->
+<div id="mobileNavOverlay" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+	  <a href="index.html">Home</a>
+	  <a href="cshowcase.html">Collection</a>
+	  <a href="about.html">About</a>
+	</div>
+  </div>
+  
+  <!-- Toggle Scripts -->
+  <script>
+	function openNav() {
+	  document.getElementById("mobileNavOverlay").style.width = "100%";
+	}
+  
+	function closeNav() {
+	  document.getElementById("mobileNavOverlay").style.width = "0%";
+	}
+  
+	document.addEventListener('DOMContentLoaded', () => {
+	  const currentPath = window.location.pathname.split('/').pop().toLowerCase();
+	  const links = document.querySelectorAll('.overlay-content a');
+  
+	  links.forEach(link => {
+		const linkPath = link.getAttribute('href').toLowerCase();
+		if (
+		  linkPath === currentPath || 
+		  (currentPath === '' && linkPath === 'index.html')
+		) {
+		  link.classList.add('active');
+		}
+	  });
+	});
+  </script>
+  
+  
+		  
+		  
 		  
 
   
