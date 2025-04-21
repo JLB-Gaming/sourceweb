@@ -347,6 +347,8 @@ html, body {
   /* remove margin-left or padding */
 }
 
+
+
 @media (max-width: 1080px) {
   .homepage-text { 
     font-size: 0.8rem;
